@@ -1,0 +1,56 @@
+#topHeader-container {
+    max-width: 1640px;
+    margin: 0 auto;
+    border-bottom: 1px solid #cdcdcd;
+
+
+    .topHeader-parent {
+        width: 80%;
+        margin: 0 auto;
+
+
+        .topHeader-infos {
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+
+
+            .topHeader-left {
+                display: flex;
+
+                p {
+                    color: #7a7a7a;
+                }
+            }
+
+            .topHeader-right {
+                ul {
+                    display: flex;
+                    gap: 10px;
+
+                    li {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        background-color: #cdcdcd;
+                        position: relative;
+                        transition: all 0.5s;
+
+                        a {
+                            position: absolute;
+                            left: 25%;
+                            top: 22%;
+                            font-size: 17px;
+                            color: white;
+                        }
+                    }
+
+                    li:hover {
+                        background-color: #f35525;
+                    }
+                }
+            }
+        }
+    }
+}

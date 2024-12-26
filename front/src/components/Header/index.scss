@@ -1,0 +1,51 @@
+#header-container {
+    max-width: 1640px;
+    margin: 0 auto;
+
+    .header-parent {
+        width: 80%;
+        margin: 0 auto;
+
+        .header-nav {
+            width: 100%;
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .header-left {
+                text-transform: uppercase;
+                font-size: 28px;
+                font-weight: 700;
+            }
+
+            .header-right {
+                ul {
+                    display: flex;
+                    gap: 60px;
+                    font-weight: 500;
+                    align-items: center;
+
+                    .visit {
+                        background-color: #1e1e1e;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        color: white;
+                        padding-right: 12px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+
+                    li:hover {
+                        color: #f35525;
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
