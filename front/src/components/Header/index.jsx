@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.scss"
 import { FaCalendar } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -13,8 +14,8 @@ const Header = () => {
 
                     <div className='header-right'>
                         <ul className='ul'>
-                            <li>Home</li>
-                            <li>Properties</li>
+                            <li><NavLink to={"/"}>Home</NavLink></li>
+                            <li><NavLink to={"/properties"}>Properties</NavLink></li>
                             <li>Contact Us</li>
                             <li className='visit'>
                                 <div style={{width: "40px", height: "40px", backgroundColor: "#f35525", borderRadius: "50%", position: "relative"}}>
