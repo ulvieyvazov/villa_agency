@@ -1,9 +1,48 @@
-#home-container{
+#home-container {
     max-width: 1640px;
     margin: 0 auto;
-    .home-parent{
+
+    .home-parent {
         width: 100%;
         margin: 0 auto;
-        
+
+        .home-carousel {
+            width: 100%;
+        }
+
+        .home-best {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 80px;
+            display: flex;
+            justify-content: space-between;
+
+            .home-best-left {}
+
+            .home-best-medium {
+                width: 30%;
+                .best-medium-top {
+                    h4{
+                        text-transform: uppercase;
+                        color: #ee626b;
+                        border-left: 3px solid #ee626b;
+                        padding-left: 5px;
+                    }
+
+                    h2{
+                        font-size: 45px;
+                    }
+                }
+
+                .best-medium-bottom{
+                    *{
+                        padding: 15px 0;
+                    }
+                    span{
+                        color: #f35525;
+                    }
+                }
+            }
+        }
     }
 }
