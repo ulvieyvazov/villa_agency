@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./index.scss"
 import SwiperHome from "../../SwiperHome"
+import axios from "axios"
 
 const Home = () => {
+
+    const [data, setData] = useState([])
+
+
+    const getData = async () => {
+        const res = await axios.get("http://localhost:5000/villas")
+
+        setData(res.data)
+    }
+
+
+    
+    
+    useEffect(() => {
+        getData()
+    }, [])
+
+
     return (
         <div id='home-container'>
             <div className='home-parent'>
@@ -54,6 +73,44 @@ const Home = () => {
                         <div className='best-card'>
 
                         </div>
+                    </div>
+                </div>
+
+
+
+
+                <div className='properties-parent'>
+                    <div className='properties-text'>
+                        <h3>We Provide The Best Property You Like</h3>
+                    </div>
+
+                    <div className='properties-card'>
+                        {
+                            data.map((d) => (
+                                <div className='properties-card-child'>
+                                    <img src={d.img} alt="" />
+
+                                    <div className='card-text'>
+                                        <div className='card-text-top'>
+                                            <span>dsds</span>
+                                            <h6></h6>
+                                            <h4></h4>
+                                            <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+
+                                        <div className='card-text-bottom'>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

@@ -1,8 +1,12 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
+const cors = require('cors');
 
 // JSON formatında məlumatları oxumaq üçün middleware
+
+app.use(cors()); 
+
 app.use(express.json());
 
 // Verilənlər bazası ilə əlaqə
@@ -134,7 +138,7 @@ app.delete('/villas/:id', (req, res) => {
 });
 
 // Serveri başlatmaq
-const PORT = 4000;
+const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server http://localhost:${PORT} üzərində çalışır`);
 });
